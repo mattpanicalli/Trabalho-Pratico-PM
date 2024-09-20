@@ -1,11 +1,19 @@
-public class CadastroFuncionario extends Cadastro {
+public class Funcionario  {
+       private String nome;
        private String cpf;
        private String email;
 
-       public CadastroFuncionario(String nome, String cpf, String email) {
-              super(nome);
+       public Funcionario(String nome, String cpf, String email) {
+              this.nome = nome;
               this.cpf = cpf;
               this.email = email;
+            }
+
+      public String getNome() {
+                  return nome;
+            }
+      public void setNome(String nome) {
+                  this.nome = nome;
             }
       public String getCpf() {
                   return cpf;

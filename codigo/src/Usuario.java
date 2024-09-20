@@ -1,8 +1,8 @@
-public class CadastroUsuario extends CadastroFuncionario {
+public class Usuario extends Funcionario {
     private String login;
     private String senha;
     
-    public CadastroUsuario(String nome, String cpf, String email, String login, String senha) {
+    public Usuario(String nome, String cpf, String email, String login, String senha) {
         super(nome, cpf, email);
         this.login = login;
         this.senha = senha;
