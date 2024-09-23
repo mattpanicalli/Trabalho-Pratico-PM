@@ -107,6 +107,13 @@ public class Passagem {
         return tarifaTotal;
     }
 
+    public String pesquisaVoo(String origem, String destino, LocalDate data) {
+        if (aeroportoOrigem.equals(origem) && aeroportoDestino.equals(destino) && dataHoraVoo.equals(data)) {
+            return this.codigoVoo + " " + this.aeroportoOrigem + " " + this.aeroportoDestino + " " + this.dataHoraVoo;
+        }
+        return "Voo não encontrado!";
+    }
+
     public void exibirDetalhesPassagem() {
         System.out.println("Voo: " + codigoVoo);
         System.out.println("Aeroporto de Origem: " + aeroportoOrigem);
