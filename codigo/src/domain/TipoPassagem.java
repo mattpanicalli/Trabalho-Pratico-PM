@@ -6,6 +6,9 @@ public class TipoPassagem {
         this.tipoPassagem = tipoPassagem;
     }
 
+    public TipoPassagem() {
+    }
+
     public String getTipoPassagem() {
         return tipoPassagem;
     }
@@ -20,20 +23,17 @@ public class TipoPassagem {
         } else {
             System.out.println("Passagem comprada com sucesso");
         }
-        
     }
 
     public boolean validaVooInternacional(String paisOrigem, String paisDestino) {
         boolean vooInternacional = !paisOrigem.equalsIgnoreCase(paisDestino);
         
         if (vooInternacional) {
-            System.out.println("Voo internacional: valor deve ser mantido em dólares.");
+            System.out.println("Voo internacional: valor deve ser mantido em dólares");
         } else {
-            System.out.println("Voo doméstico: valor pode estar em moeda local.");
+            System.out.println("Voo doméstico: valor pode estar em moeda local");
         }
         
         return vooInternacional;
     }
-
-
 }

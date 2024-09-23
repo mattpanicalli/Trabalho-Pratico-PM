@@ -14,6 +14,9 @@ public class Bilhete {
         this.tipoVoo = tipoVoo;
     }
 
+    public Bilhete() {
+    }
+
     public String getNome() {
         return nome;
     }
