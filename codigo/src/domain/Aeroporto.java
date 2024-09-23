@@ -1,3 +1,4 @@
+package domain;
 public class Aeroporto  {
     private String nome;
     private static String sigla;
@@ -7,7 +8,7 @@ public class Aeroporto  {
 
     public Aeroporto(String nome, String sigla, String cidade, String estado, String pais) {
         this.nome = nome;
-        this.sigla = sigla;
+        Aeroporto.sigla = sigla;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
@@ -52,6 +53,4 @@ public class Aeroporto  {
     public void setPais(String pais) {
         this.pais = pais;
     }
-    
-    
 }

@@ -1,3 +1,4 @@
+package domain;
 public class Valor {
     private double tarifaBasica;
     private double tarifaBusiness;
@@ -51,6 +52,32 @@ public class Valor {
 
     public void setValorBagagemAdicional(double valorBagagemAdicional) {
         this.valorBagagemAdicional = valorBagagemAdicional;
+    }
+
+    public double calcularTarifaTotal(int tipoTarifa, int quantidadeBagagens) {
+        double tarifa = 0.0;
+        switch (tipoTarifa) {
+            case 1:
+                tarifa = tarifaBasica;
+                break;
+            case 2:
+                tarifa = tarifaBusiness;
+                break;
+            case 3:
+                tarifa = tarifaPremium;
+                break;
+            default:
+                System.out.println("Tipo de tarifa inválido!");
+                return 0.0;
+        }
+
+        tarifa += valorPrimeiraBagagem;
+
+        if (quantidadeBagagens > 1) {
+            tarifa += (quantidadeBagagens - 1) * valorBagagemAdicional;
+        }
+
+        return tarifa;
     }
 
 }

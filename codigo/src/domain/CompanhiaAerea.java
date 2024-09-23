@@ -1,11 +1,12 @@
-public class CompanhiasAereas  {
+package domain;
+public class CompanhiaAerea  {
     private String nome;
     private String cnpj;
     private String email;
     private String bagagem;
     private boolean bagagemAdicional;
 
-    public CompanhiasAereas(String nome, String cnpj, String email) {
+    public CompanhiaAerea(String nome, String cnpj, String email, String bagagem, Boolean bagagemAdicional) {
         this.nome = nome;
         this.cnpj = cnpj;
         this.email = email;
@@ -52,5 +53,4 @@ public class CompanhiasAereas  {
     public void setBagagemAdicional(boolean bagagemAdicional) {
         this.bagagemAdicional = bagagemAdicional;
     }
-
 }

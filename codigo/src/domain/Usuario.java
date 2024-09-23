@@ -1,3 +1,4 @@
+package domain;
 public class Usuario extends Funcionario {
     private String login;
     private String senha;

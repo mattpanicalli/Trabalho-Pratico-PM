@@ -1,7 +1,8 @@
-public class TipoPassagen {
+package domain;
+public class TipoPassagem {
     private String tipoPassagem;
 
-    public TipoPassagen(String tipoPassagem) {
+    public TipoPassagem(String tipoPassagem) {
         this.tipoPassagem = tipoPassagem;
     }
 
@@ -22,10 +23,17 @@ public class TipoPassagen {
         
     }
 
-    public boolean validaVooInternacional(String aeroportoOrigem, String aeroportoDestino) {
-        String paisOrigem = aeroportoOrigem.substring(0, 2);
-        String paisDestino = aeroportoDestino.substring(0, 2);
-
-        return !paisOrigem.equals(paisDestino);
+    public boolean validaVooInternacional(String paisOrigem, String paisDestino) {
+        boolean vooInternacional = !paisOrigem.equalsIgnoreCase(paisDestino);
+        
+        if (vooInternacional) {
+            System.out.println("Voo internacional: valor deve ser mantido em dólares.");
+        } else {
+            System.out.println("Voo doméstico: valor pode estar em moeda local.");
+        }
+        
+        return vooInternacional;
     }
+
+
 }
