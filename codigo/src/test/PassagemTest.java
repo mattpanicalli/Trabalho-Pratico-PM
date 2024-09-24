@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.Passagem;
-//import domain.CompanhiaAerea;
 import domain.Valor;
 
 public class PassagemTest {
@@ -35,14 +34,12 @@ public class PassagemTest {
         Passagem passagem = new Passagem("AA1234", "GRU", "JFK", LocalDate.of(2024, 9, 25), null, companhia, "BRL", null);
 
         passagem.calcularPrecoFinal("Ida e Volta", 1000);
-        // Teste visual ou modificar o método para retornar o valor calculado
     }
 
     @Test
     public void testCalcularTarifaTotalComVoos() {
-        // Criar uma lista de Valores simulada e testar o cálculo
         List<Valor> valores = new ArrayList<>();
-        valores.add(new Valor(620, 0, 0, 0, 0)); // Exemplo
+        valores.add(new Valor(620, 0, 0, 0, 0));
         double tarifaTotal = Passagem.calcularTarifaTotalComVoos(valores, 1, 2);
 
         assertEquals(620, tarifaTotal, 0.001); 

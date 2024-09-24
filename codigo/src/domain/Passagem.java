@@ -122,5 +122,4 @@ public class Passagem {
         System.out.println("Companhia Aérea: " + companhiasAereas.getNome());
         System.out.println("Moeda: " + moeda);
     }
-
 }
