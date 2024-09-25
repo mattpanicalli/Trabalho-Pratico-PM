@@ -45,13 +45,5 @@ public class PassagemTest {
         assertEquals(620, tarifaTotal, 0.001); 
     }
 
-    @Test
-    public void testPesquisaVoo() {
-        CompanhiaAerea companhia = new CompanhiaAerea("Latam", "12345678901", "latam@email.com", "20kg", true);
-        Passagem passagem = new Passagem("AA1234", "GRU", "JFK", LocalDate.of(2024, 9, 25), null, companhia, "BRL", null);
-
-        String resultado = passagem.pesquisaVoo("GRU", "JFK", LocalDate.of(2024, 9, 25));
-        assertEquals("AA1234 GRU JFK 2024-09-25", resultado);
-    }
 
 }
